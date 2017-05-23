@@ -1,6 +1,5 @@
 def is_asc(n):
     if n<10:
-        print("True")
         return
     elif n>10:
         a=0
@@ -19,10 +18,8 @@ def is_asc(n):
                 temp=r2
                 
             elif ori==0 and temp<=r2:
-                print("True")
                 return
             if  r2<temp:
-                print("False")
                 return
                
                    
