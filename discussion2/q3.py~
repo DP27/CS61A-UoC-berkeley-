@@ -1,0 +1,6 @@
+""Fibonacci Series""
+
+def nth_fibo(n):
+    prev,curr=0,1
+    
+    

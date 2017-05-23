@@ -1,0 +1,5 @@
+"""Accumulate"""
+def lazy_accumulate(f, start, n, term):
+    result=0
+    while i<n:
+        result+=term(i)+start
