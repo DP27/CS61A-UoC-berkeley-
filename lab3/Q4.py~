@@ -1,0 +1,7 @@
+def isnumber(thing):
+   try:
+       int(thing)
+   except:
+       return False
+   return True
+    
