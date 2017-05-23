@@ -1,0 +1,6 @@
+def cube(x):
+    return x*x*x
+
+print("should be 1:",cube(1))
+print("should be 8:",cube(2))
+print("should be 27:",cube(3))

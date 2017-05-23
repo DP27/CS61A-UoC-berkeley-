@@ -1,0 +1,7 @@
+def absolute(x):
+    if x>0:
+        print("The absolute value is",x)
+    elif x<0:
+        print("The absolute value is",-x)
+    else:
+        print("The value is Zero")
