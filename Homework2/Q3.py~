@@ -1,0 +1,6 @@
+def double(f(n)):
+    return f(f(n))
+
+def f(n):
+    result=n*n
+    return result

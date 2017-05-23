@@ -1,0 +1,15 @@
+def repeated(f,n):
+    def ret_func(n):
+        func=f(n)
+        for i in range(,0):
+            result=f(func)
+            func=result
+            return result
+        print('result is:',result)
+        return ret_func
+        
+def f(a):
+    print('Hi')
+    return a*a
+
+    

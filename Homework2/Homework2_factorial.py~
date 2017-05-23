@@ -1,0 +1,13 @@
+def product(n):
+    if n==0:
+        return 1
+    else:
+    while(n):
+        product=n*(n-1)
+        if n!=0:
+            n=n-1
+            continue
+        else if n==0:
+            print("Products is :",product)
+            return
+    
