@@ -1,0 +1,8 @@
+def make_pair(x, y):
+       """Return a function that behaves like a pair."""
+       def dispatch(m):
+           if m == 0:
+               return x
+           elif m == 1:
+               return y
+       return dispatch

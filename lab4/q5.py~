@@ -1,0 +1,9 @@
+"""Line Segment"""
+def make_segment(a,b):
+    return (a,b)
+
+def start_point(a,b):
+    return a
+
+def end_point(a,b):
+    return b
