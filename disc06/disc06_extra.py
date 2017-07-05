@@ -111,7 +111,6 @@ def quicksort_list(lst):
         pivot=lst[0]
         less=[n for n in lst if n < pivot]
         greater=[n for n in lst[1:] if n >= pivot]
-        print(less,greater)
         lst=quicksort_list(less)+[pivot]+quicksort_list(greater)
         return lst
 
@@ -147,10 +146,8 @@ Link(1, Link(3, Link(4)))
         while link.rest is not Link.empty:
             if link.rest.first < pivot:
                 Less=Link(link.rest.first,Less)
-                print('l',Less)
             elif link.rest.first > pivot:
                 greater=Link(link.rest.first,greater)
-                print('g',greater)
             link=link.rest
         p=Link(pivot)
         Less=p.extend_list(Less)
@@ -195,27 +192,6 @@ def redundant_map(t, f):
     t.branches=[redundant_map(n,new_f) for n in t.branches]
     return t
             
-
-class Tree(object):
-    empty=()
-    def __init__(self,root,branches=[]):
-        for b in branches:
-            assert isinstance(b,Tree)
-        self.root=root
-        self.branches=branches
-
-    def __repr__(self):
-        str=''
-        if self.branches!=[]:
-            str='Tree({0},{1})'.format(self.root,self.branches)
-            return str
-        else:
-            if self.root:
-                return 'Tree({0})'.format(self.root)
-    def isleaf(self):
-        return not self.branches
-
-    
 
 class Link:
 
