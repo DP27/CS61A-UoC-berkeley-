@@ -661,7 +661,7 @@ class BodyguardAnt(Ant):
 
     def reduce_armor(self, amount):
         "*** YOUR CODE HERE ***"
-        self.armor-=1
+        self.armor-=amount
         print("BodyguardAnt armor reduced to:",self.armor)
         if self.armor==0 and self.ant == None:
             self.place.remove_insect(self)
