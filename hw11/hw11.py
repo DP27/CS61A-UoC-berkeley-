@@ -82,24 +82,9 @@ def permutations(lst):
                     r_list=[]
                     r_list+=[lst[0]]
             yield lst_of_lst
-    
-    
-        
-        
-        
-        
-        
-    
-    
-    
-
-        
-    
-
-
-
-        
-
+            
+            
+            
 class Tree:
     def __init__(self, root, branches=[]):
         for c in branches:
