@@ -48,41 +48,17 @@ def permutations(lst):
     >>> sorted(permutations("ab"))
     [['a', 'b'], ['b', 'a']]
     """
-    
+    index=0
     if not lst:
-        yield []
-        return
-    "*** YOUR CODE HERE ***"
-    if type(lst)==tuple:
-        t=lst
-        lst=[]
-        for elem in t:
-            lst+=[elem]
-    if type(lst)==str:
-        lst=list(lst)
-            
-    for elem in lst:
-        if elem:
-            l_temp=[lst[0]]
-            lst=lst[1:]
-            lst.extend(l_temp)
-            temp=list(lst[1:])
-            r_list=[]
-            lst_of_lst=[]
-            r_list+=[lst[0]]
-            while len(lst_of_lst)!=len(lst)-1:
-                holder=temp[1:]
-                t_holder=[temp[0]]
-                temp=[]
-                temp.extend(holder)
-                temp.extend(t_holder)
-                if len(r_list)==1:
-                    r_list.extend([e for e in temp])
-                    lst_of_lst+=[r_list,]
-                    r_list=[]
-                    r_list+=[lst[0]]
-            yield lst_of_lst
-            
+        return []
+    elif len(lst)==1:
+        return lst
+    else:
+        for index in range(len(lst)):
+            first=[lst[index]]
+            rest=permutations([:index]+[index+1:])
+            for i in rest:
+                yield first+i
             
             
 class Tree:
