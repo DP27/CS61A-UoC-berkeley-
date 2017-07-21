@@ -56,7 +56,7 @@ def permutations(lst):
     else:
         for index in range(len(lst)):
             first=[lst[index]]
-            rest=permutations([:index]+[index+1:])
+            rest=permutations(lst[:index]+lst[index+1:])
             for i in rest:
                 yield first+i
             
