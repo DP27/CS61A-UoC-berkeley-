@@ -50,9 +50,9 @@ def permutations(lst):
     """
     index=0
     if not lst:
-        return []
+        yield []
     elif len(lst)==1:
-        return lst
+        yield lst
     else:
         for index in range(len(lst)):
             first=[lst[index]]
