@@ -35,7 +35,7 @@ def trap(s, k):
     while k:
         yield next(t)
         k-=1
-    #raise ValueError
+    raise ValueError
         
             
         
